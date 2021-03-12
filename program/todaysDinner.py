@@ -1,4 +1,5 @@
 import random
+import datetime
 
 # 和食洋食の夕食リスト
 yoDinner = ["ハンバーガー", "ステーキ", "パスタ"]
@@ -11,8 +12,9 @@ print("和食？洋食？（和食: 1, 洋食: 2）")
 # 入力
 userInput = input(">>>")
 
+today = datetime.date.today()
 # 条件分岐 && 表示
 if userInput == "1":
-  print("今日の夕食は" + random.choice(yoDinner) + "わよ、楽しんで！")
+  print(str(today) + "の夕食は" + random.choice(yoDinner) + "わよ、楽しんで！")
 if userInput == "2":
   print("今日の夕食は" + random.choice(waDinner) + "わよ、楽しんで！")
